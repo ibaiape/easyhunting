@@ -1,0 +1,50 @@
+{
+	"name": "template",
+	"versions": {
+		"attack": "10",
+		"navigator": "4.5.5",
+		"layer": "4.3"
+	},
+	"domain": "enterprise-attack",
+	"filters": {
+		"platforms": [
+			"Windows"
+		]
+	},
+	"sorting": 0,
+	"layout": {
+		"layout": "side",
+		"aggregateFunction": "average",
+		"showID": false,
+		"showName": true,
+		"showAggregateScores": false,
+		"countUnscored": false
+	},
+	"hideDisabled": true,
+	"techniques": [],
+	"legendItems": [],
+	"metadata": [],
+	"links": [],
+	"legendItems": [
+		{
+			"label": "triage",
+			"color": "#e96767"
+		},
+		{
+			"label": "alienvault",
+			"color": "#b7e083"
+		},
+		{
+			"label": "virustotal",
+			"color": "#9dcdff"
+		},
+		{
+			"label": "capa",
+			"color": "#f5e380"
+		}
+	],
+	"showTacticRowBackground": true,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true,
+	"selectSubtechniquesWithParent": false
+}

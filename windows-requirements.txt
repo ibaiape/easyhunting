@@ -1,0 +1,13 @@
+flare-capa
+iced-x86
+image
+lief
+pefile
+Pillow
+py-console
+python-magic
+requests
+scipy
+tabulate
+urllib3
+yara-python

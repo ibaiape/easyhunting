@@ -9,20 +9,20 @@ Features:
 * Get ***mitre attack techniques*** used by a sample. Techniques are obtained via triage, alienvault, virustotal and capa. Also, a json file is created to import in mitre attack navigator framework.
 * Get ***potencial similar files*** using similarity-based hashes such as imphash, ssdeep, tlsh and icon dhash, and other features like signature and similar size. Note: ssdeep and tlsh hashes are not available in windows system.
 * Get ***threat intel information about file, ip, domain and url*** from intel sources. It dont pretend to show a extended report, but just to get the most important info (for me) with a tag model with the following structure:
-        - *basic information* about the sample
-        - *tags* extracted from intel sources
-        - *have* highlights the interesting info (for me again) in a fast way
-        - *ttps* shows mitre-based techniques used by the sample
-        - *link* to full report
+    - *basic information* about the sample*
+    - *tags* extracted from intel sources
+    - *have* highlights the interesting info (for me again) in a fast way
+    - *ttps* shows mitre-based techniques used by the sample
+    - *link* to full report
 * ***Virustotal Intelligence Queries*** to improve the similar file search ([documentation](https://support.virustotal.com/hc/en-us/articles/360001385897-File-search-modifiers)). Note: pro api key is required!
 * ***See the latest malware*** in the wild searching with tags.
 * ***Download samples*** from intel sources.
 
 ***Intel sources available!***: *virustotal, bazaar, urlhaus, threatfox, alienvault* and *triage*. You just need api key for virustotal and triage.
 
-***How to use?*** [here](###Usage)
+***How to use?*** [here](#Usage)
 
-#### **Installation**
+### **Installation**
 1. Install Python3 (and create a virtual environment)
             `python3.9 -m venv easyhunting_env`
             `source easyhunting_env/bin/activate`
@@ -32,7 +32,7 @@ Features:
     for windows: `python -m pip install -r windows-requirements.txt`
 4. Run easyhunting.py
 
-##### **Config file**
+### **Config file**
 ```
 [apis]
 virustotal = <vt-api-key>
@@ -47,7 +47,7 @@ vtintelligence = 15
 Limits indicate the number of results in each request. For instance, with tags = 10, the tool will only show the last 10 malware in each intel source with that tag. 
 Note: take care with high value in "similar", since it could take a long time.
 
-###### **Capa 3.2.0 integration**
+#### **Capa 3.2.0 integration**
 1. Download the latest release (version 3.2.0) from [capa](https://github.com/mandiant/capa/archive/refs/tags/v3.2.0.zip) repo.
 2. Extract .zip file in "utils" folder and rename folder from "capa-3.2.0" to "capa".
 3. Download capa rules, extract them in "capa" folder and rename folder from "capa-rules-3.2.0" to "rules".
@@ -124,7 +124,7 @@ def has_file_limitation(rules: RuleSet, capabilities: MatchResults, is_standalon
     return False
 ```
 
-###### **Yara rules 3.2.0 integration**
+##### **Yara rules 3.2.0 integration**
 1. Create "yara_rules" folder in "utils".
 2. `git clone https://github.com/Yara-Rules/rules` in "yara_rules" folder.
 3. If linux, comment `malware/MALW_AZORULT.yar` in malware_index.yar (dependency error)

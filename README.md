@@ -9,7 +9,7 @@ Features:
 * Get ***mitre attack techniques*** used by a sample. Techniques are obtained via triage, alienvault, virustotal and capa. Also, a json file is created to import in mitre attack navigator framework.
 * Get ***potencial similar files*** using similarity-based hashes such as imphash, ssdeep, tlsh and icon dhash, and other features like signature and similar size. Note: ssdeep and tlsh hashes are not available in windows system.
 * Get ***threat intel information about file, ip, domain and url*** from intel sources. It dont pretend to show a extended report, but just to get the most important info (for me) with a tag model with the following structure:
-    - *basic information* about the sample*
+    - *basic information* about the sample
     - *tags* extracted from intel sources
     - *have* highlights the interesting info (for me again) in a fast way
     - *ttps* shows mitre-based techniques used by the sample
@@ -52,10 +52,12 @@ Note: take care with high value in "similar", since it could take a long time.
 2. Extract .zip file in "utils" folder and rename folder from "capa-3.2.0" to "capa".
 3. Download capa rules, extract them in "capa" folder and rename folder from "capa-rules-3.2.0" to "rules".
 4. Change the following code in "capa/capa/main.py":
+
 line 849:
 ```
 def main(argv=None):
 ```
+--
 ```
 def main(filename, argv=None):
     argv = ['--rules', os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/rules', '-j', '-q', filename]
@@ -72,6 +74,7 @@ line 954:
                 logger.debug("file limitation short circuit, won't analyze fully.")
                 return E_FILE_LIMITATION
 ```
+--
 ```
     if has_file_limitation(rules, pure_file_capabilities):
         return None
@@ -82,6 +85,7 @@ line 1028:
     if args.json:
         print(capa.render.json.render(meta, rules, capabilities))
 ```
+--
 ```
     if args.json:
         return capa.render.json.render(meta, rules, capabilities)
@@ -111,7 +115,7 @@ def has_file_limitation(rules: RuleSet, capabilities: MatchResults, is_standalon
 
     return False
 ```
-
+--
 ```
 def has_file_limitation(rules: RuleSet, capabilities: MatchResults, is_standalone=True) -> bool:
     file_limitation_rules = list(filter(is_file_limitation_rule, rules.rules.values()))

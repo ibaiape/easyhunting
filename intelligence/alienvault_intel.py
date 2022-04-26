@@ -163,7 +163,7 @@ def alienvault_url_search(url):
 
 def have_pulses(hash):
 	file_report = alienvault.file_search(hash)
-	if not file_report or or file_report.get('general') == None or (file_report.get('general').get('pulse_info') and file_report.get('general').get('pulse_info').get('count') == 0):
+	if not file_report or file_report.get('general') == None or (file_report.get('general').get('pulse_info') and file_report.get('general').get('pulse_info').get('count') == 0):
 		return False
 	return True
 

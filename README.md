@@ -7,7 +7,7 @@ Features:
 * The ***disassembly of the first bytes*** to identify in a fast way if pe file has a non-common ep like packer or file infector or if the hex chunk is a shellcode. If you want to disassemble a shellcode, you have to choose the architecture (sc to x86 and sc64 to x64)
 * Get ***yara, sigma and ids rules*** of a sample from an arbitrary yara rule repository (e.g. [this repo](https://github.com/Yara-Rules/rules)) and intelligence sources.
 * Get ***mitre attack techniques*** used by a sample. Techniques are obtained via triage, alienvault, virustotal and capa. Also, a json file is created to import in mitre attack navigator framework.
-* Get ***potencial similar files*** using similarity-based hashes such as imphash, ssdeep, tlsh and icon dhash, and other features like signature and similar size. Note: ssdeep and tlsh hashes are not available in windows system.
+* Get ***potencial similar files*** using similarity-based hashes such as imphash, ssdeep, tlsh and icon dhash, and other features like signature, similar size and similar metadata. Note: ssdeep and tlsh hashes are not available in windows system.
 * Get ***threat intel information about file, ip, domain and url*** from intel sources. It dont pretend to show a extended report, but just to get the most important info (for me) with a tag model with the following structure:
     - *basic information* about the sample
     - *tags* extracted from intel sources

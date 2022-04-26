@@ -28,8 +28,8 @@ Features:
             `source easyhunting_env/bin/activate`
 2. Download project with: `git clone https://github.com/ppt0/easyhunting.git`
 3. Install python packages
-    for linux: `python -m pip install -r linux-requirements.txt`
-    for windows: `python -m pip install -r windows-requirements.txt`
+- for linux: `python -m pip install -r linux-requirements.txt`
+- for windows: `python -m pip install -r windows-requirements.txt`
 4. Run easyhunting.py
 
 ### **Config file**

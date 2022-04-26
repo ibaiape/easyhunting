@@ -2,6 +2,8 @@
 
 This tool tries to facilitate the day to day of a threat hunter or malware analyst.
 
+<span style="color:red">Important! easyhunting **does not upload** any info or samples to internet.</span>
+
 Features:
 * Get ***a simple file report***. It includes peid signature, similarity-based hashes, sections overview, signature, [malapi](https://malapi.io/) matches and intelligence sources hits.
 * The ***disassembly of the first bytes*** to identify in a fast way if pe file has a non-common ep like packer or file infector or if the hex chunk is a shellcode. If you want to disassemble a shellcode, you have to choose the architecture (sc to x86 and sc64 to x64)

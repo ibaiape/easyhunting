@@ -1,8 +1,8 @@
 {
 	"name": "template",
 	"versions": {
-		"attack": "10",
-		"navigator": "4.5.5",
+		"attack": "11",
+		"navigator": "4.6.0",
 		"layer": "4.3"
 	},
 	"domain": "enterprise-attack",

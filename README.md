@@ -133,6 +133,8 @@ def has_file_limitation(rules: RuleSet, capabilities: MatchResults, is_standalon
 2. `git clone https://github.com/Yara-Rules/rules` in "yara_rules" folder.
 3. If linux, comment `malware/MALW_AZORULT.yar` in malware_index.yar (dependency error)
 
+Note: if you want to use other yara rules repo, you just have to change the .yar file path in "pefil/modules/yarautil.py".
+
 ### **Usage**
 
 demo malware hash: `c9de316342aff789e9dcd725b893f48256f381c936ba19a7ccd9336e1ed9cace`

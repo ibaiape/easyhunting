@@ -128,7 +128,7 @@ def has_file_limitation(rules: RuleSet, capabilities: MatchResults, is_standalon
     return False
 ```
 
-##### **Yara rules 3.2.0 integration**
+#### **Yara rules 3.2.0 integration**
 1. Create "yara_rules" folder in "utils".
 2. `git clone https://github.com/Yara-Rules/rules` in "yara_rules" folder.
 3. If linux, comment `malware/MALW_AZORULT.yar` in malware_index.yar (dependency error)

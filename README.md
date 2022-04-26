@@ -8,7 +8,7 @@ Features:
 * Get ***yara, sigma and ids rules*** of a sample from an arbitrary yara rule repository (e.g. [this repo](https://github.com/Yara-Rules/rules)) and intelligence sources.
 * Get ***mitre attack techniques*** used by a sample. Techniques are obtained via triage, alienvault, virustotal and capa. Also, a json file is created to import in mitre attack navigator framework.
 * Get ***potencial similar files*** using similarity-based hashes such as imphash, ssdeep, tlsh and icon dhash, and other features like signature, similar size and similar metadata. Note: ssdeep and tlsh hashes are not available in windows system.
-* Get ***threat intel information about file, ip, domain and url*** from intel sources. It dont pretend to show a extended report, but just to get the most important info (for me) with a tag model with the following structure:
+* Get ***threat intel information about file, ip, domain and url*** from intel sources. It does not pretend to show a extended report,  but rather get the most the most important info (for me) with a tag model presenting the following structure:
     - *basic information* about the sample
     - *tags* extracted from intel sources
     - *have* highlights the interesting info (for me again) in a fast way

@@ -6,7 +6,7 @@ Features:
 * Get ***a simple file report***. It includes peid signature, similarity-based hashes, sections overview, signature, [malapi](https://malapi.io/) matches and intelligence sources hits.
 * The ***disassembly of the first bytes*** to identify in a fast way if pe file has a non-common ep like packer or file infector or if the hex chunk is a shellcode. If you want to disassemble a shellcode, you have to choose the architecture (sc to x86 and sc64 to x64)
 * Get ***yara, sigma and ids rules*** of a sample from an arbitrary yara rule repository (e.g. [this repo](https://github.com/Yara-Rules/rules)) and intelligence sources.
-* Get ***mitre attack techniques*** used by a sample. Techniques are obtained via triage, alienvault, virustotal and capa. Also, a json file is created to import in mitre attack navigator framework.
+* Get ***mitre attack techniques*** used by a sample. Techniques are obtained via triage, alienvault, virustotal and capa. Also, a json file is created in "mitre_navigator_reports" folder to import in mitre attack [navigator](https://mitre-attack.github.io/attack-navigator/) framework.
 * Get ***potencial similar files*** using similarity-based hashes such as imphash, ssdeep, tlsh and icon dhash, and other features like signature, similar size and similar metadata. Note: ssdeep and tlsh hashes are not available in windows system.
 * Get ***threat intel information about file, ip, domain and url*** from intel sources. It does not pretend to show a extended report,  but rather get the most the most important info (for me) with a tag model presenting the following structure:
     - *basic information* about the sample
@@ -16,7 +16,7 @@ Features:
     - *link* to full report
 * ***Virustotal Intelligence Queries*** to improve the similar file search ([documentation](https://support.virustotal.com/hc/en-us/articles/360001385897-File-search-modifiers)). Note: pro api key is required!
 * ***See the latest malware*** in the wild searching with tags.
-* ***Download samples*** from intel sources.
+* ***Download samples*** from intel sources. The samples are downloaded in "downloaded_samples" folder.
 
 ***Intel sources available!***: *virustotal, bazaar, urlhaus, threatfox, alienvault* and *triage*. You just need api key for virustotal and triage.
 

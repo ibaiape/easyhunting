@@ -153,6 +153,8 @@ def get_similar(file):
         if not more_potencial_ones.get(len(fil.get('similar'))):
             more_potencial_ones[len(fil.get('similar'))] = list()
         more_potencial_ones[len(fil.get('similar'))].append(fil)
+    if len(more_potencial_ones.keys()) == 0:
+        return
     for level in range(list(sorted(more_potencial_ones.keys(), reverse=True))[0], 0, -1):
         if not more_potencial_ones.get(level):
             continue

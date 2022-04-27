@@ -52,7 +52,7 @@ Note: take care with high value in "similar", since it could take a long time.
 #### **Capa 3.2.0 integration**
 1. Download the latest release (version 3.2.0) from [capa](https://github.com/mandiant/capa/archive/refs/tags/v3.2.0.zip) repo.
 2. Extract .zip file in "utils" folder and rename folder from "capa-3.2.0" to "capa".
-3. Download capa rules, extract them in "capa" folder and rename folder from "capa-rules-3.2.0" to "rules".
+3. Download capa rules (version 3.2.0) from [here](https://github.com/mandiant/capa-rules/releases/tag/v3.2.0), extract them in "capa" folder and rename folder from "capa-rules-3.2.0" to "rules".
 4. Change the following code in "capa/capa/main.py":
 
 line 849:

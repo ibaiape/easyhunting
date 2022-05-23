@@ -20,7 +20,14 @@ Features:
 * ***See the latest malware*** in the wild searching with tags.
 * ***Download samples*** from intel sources. The samples are downloaded in "downloaded_samples" folder.
 
-***Intel sources available!***: *virustotal, bazaar, urlhaus, threatfox, alienvault* and *triage*. You just need api key for virustotal and triage.
+***Intel sources available!***: *virustotal, bazaar, urlhaus, threatfox, alienvault, triage* and *tweetfeed*. You just need api key for virustotal and triage.
+
+***To-do***
+* Get threat info from intel sources in a bulk process (file with a ioc in each row).
+
+***Contributions***
+
+If you want to participate and join the project, let me know!
 
 ***How to use?*** [here](#Usage)
 

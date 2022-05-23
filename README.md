@@ -26,7 +26,9 @@ Features:
 * Get threat info from intel sources in a bulk process (file with a ioc in each row).
 
 ***Contributors***
+
 [<img alt="ppt0" src="https://img.shields.io/badge/linkedin-ppt0-blue">](https://www.linkedin.com/in/jtmartinezgarre/)
+
 If you want to participate and join the project, let me know!
 
 ***How to use?*** [here](#Usage)

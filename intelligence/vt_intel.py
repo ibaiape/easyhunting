@@ -217,6 +217,7 @@ def vt_ip_search(ip):
 			console.setShowTimeDefault(False)
 			for tag in ip_report.get('tags'):
 				print(f'{console.highlight(tag, bgColor=bgColor.YELLOW, textColor=textColor.BLACK)}', end = ' ')
+			print()
 
 		have = list()
 

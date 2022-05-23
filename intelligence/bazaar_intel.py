@@ -46,7 +46,6 @@ def bazaar_file_search(hash, banner=True):
     print('\tlink: ' + 'https://bazaar.abuse.ch/sample/' + file_report.get('sha256_hash') + '\n')
     return True
 
-
 def bazaar_print_tags(hash):
     tags = bazaar_tags(hash)
     if tags:

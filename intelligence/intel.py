@@ -13,6 +13,7 @@ from intelligence import urlhaus_intel
 from intelligence import threatfox_intel
 from intelligence import alienvault_intel
 from intelligence import triage_intel
+from intelligence import tweetfeed_intel
 
 import intelligence.apis.virustotal as virustotal
 import intelligence.apis.bazaar as bazaar
@@ -69,23 +70,27 @@ def get_intel(target):
         threatfox_intel.threatfox_file_search(target)
         alienvault_intel.alienvault_file_search(target)
         triage_intel.triage_file_search(target)
+        tweetfeed_intel.tweetfeed_ioc_search(target)
         vt_intel.vt_file_search(target)
     elif targettype == 'url':
         urlhaus_intel.urlhaus_url_search(target)
         threatfox_intel.threatfox_ioc_search(target)
         alienvault_intel.alienvault_url_search(target)
         triage_intel.triage_url_search(target)
+        tweetfeed_intel.tweetfeed_ioc_search(target)
         vt_intel.vt_url_search(target)
     elif targettype == 'domain':
         urlhaus_intel.urlhaus_host_search(target)
         threatfox_intel.threatfox_ioc_search(target)
         alienvault_intel.alienvault_domain_search(target)
         triage_intel.triage_domain_search(target)
+        tweetfeed_intel.tweetfeed_ioc_search(target)
         vt_intel.vt_domain_search(target)
     elif targettype == 'ip':
         threatfox_intel.threatfox_ioc_search(target)
         alienvault_intel.alienvault_ip_search(target)
         triage_intel.triage_ip_search(target)
+        tweetfeed_intel.tweetfeed_ioc_search(target)
         vt_intel.vt_ip_search(target)
     elif targettype == 'file':
         sha256 = pe.get_hashes(target)['sha256']
@@ -94,6 +99,7 @@ def get_intel(target):
         threatfox_intel.threatfox_file_search(sha256)
         alienvault_intel.alienvault_file_search(sha256)
         triage_intel.triage_file_search(sha256)
+        tweetfeed_intel.tweetfeed_ioc_search(sha256)
         vt_intel.vt_file_search(sha256)
     elif targettype == 'dir':
         files = get_files_from_directory(target)
@@ -105,6 +111,7 @@ def get_intel(target):
             threatfox_intel.threatfox_print_tags(sha256)
             alienvault_intel.alienvault_print_tags(sha256)
             triage_intel.triage_print_tags(sha256)
+            tweetfeed_intel.tweetfeed_print_tags(sha256)
             vt_intel.vt_print_tags(sha256)
             print()
 

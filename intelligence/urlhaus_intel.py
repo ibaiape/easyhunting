@@ -88,8 +88,8 @@ def urlhaus_payload_search(hash, banner=True):
         return
     if banner:
         print(f'intel from {console.highlight("urlhaus", bgColor=bgColor.BLUE, textColor=textColor.WHITE)}\n')
-    print(f'\t{colors.ATTENTION}' + pe.get_printable_name(file_report.get('urls')[0].get('filename')) + f'{colors.RESET}', end = '')
-    print('\t' + pe.get_printable_size(file_report.get('file_size')) + '\t' + 'fs: ' + str(file_report.get('firstseen')) + '\turlcount: ' + str(file_report.get('url_count')) + '\t' + str(file_report.get('sha256_hash')))
+    print(f'\t{colors.ATTENTION}' + pe.get_printable_name(file_report.get('urls')[0].get('filename'), file_report.get('md5_hash'), file_report.get('sha256_hash')) + f'{colors.RESET}', end = '')
+    print('\t' + pe.get_printable_size(int(file_report.get('file_size'))) + '\t' + 'fs: ' + str(file_report.get('firstseen')) + '\turlcount: ' + str(file_report.get('url_count')) + '\t' + str(file_report.get('sha256_hash')))
     tags = set()
     if file_report.get('file_type'):
         tags.add(file_report.get('file_type'))

@@ -250,8 +250,7 @@ def alienvault_file_search(hash, banner=True):
 		for pulse in pulses:
 			print('\t\t' + pulse)
 		print()
-	return True
-
+	return True	
 
 def alienvault_print_tags(hash):
 	file_report = alienvault.file_search(hash)

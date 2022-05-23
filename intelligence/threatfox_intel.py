@@ -57,8 +57,6 @@ def threatfox_file_search(hash, banner=True):
         for ioc in iocs:
             print('\t\t' + ioc)
         print()
-    #print('\tlink: ' + 'https://threatfox.abuse.ch/ioc/' + ioc_report.get('id'))
-
 
 def threatfox_print_tags(hash):
     file_report = threatfox.search_for_IOCs_by_file_hash(hash)

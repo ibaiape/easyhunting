@@ -6,7 +6,7 @@ from intelligence import intel
 
 if __name__ == "__main__":
 	print('easy hunting tool - @ppt0\n')
-	parser = argparse.ArgumentParser(prog=None, description="easy hunting tool", usage= "python easyhunting.py -f <filepath> -ep <filepath> -sc <sc32path> -sc64 <sc64path> -r <filepath> -m <filepath, hash> -i <filepath, hash, url, domain or ip> -s <filepath> -q <vtiquery> -t <tag> -d <hash>")
+	parser = argparse.ArgumentParser(prog=None, description="easy hunting tool", usage= "python easyhunting.py -f <filepath> -ep <filepath> -sc <sc32path> -sc64 <sc64path> -r <filepath> -m <filepath, hash> -i <filepath, hash, url, domain or ip> -b <iocs file> file -s <filepath> -q <vtiquery> -t <tag> -d <hash>")
 	parser.add_argument('-f', '--file', dest='file', help='simple file report')
 	parser.add_argument('-ep', '--entrypoint', dest='entrypoint', help='disassemble the file entrypoint')
 	parser.add_argument('-sc', '--shellcode', dest='shellcode', help='disassemble a x86 shellcode')
@@ -14,6 +14,7 @@ if __name__ == "__main__":
 	parser.add_argument('-r', '--rules', dest='rules', help='get yara, sigma and ids rules from a file')
 	parser.add_argument('-m', '--mitre', dest='mitre', help='get mitre attack about a file from intel sources')
 	parser.add_argument('-i', '--intel', dest='intel', help='get threat info from intel sources')
+	#parser.add_argument('-b', '--bulk', dest='bulk', help='get threat info from intel sources in a bulk process (file with a ioc in each row)')
 	parser.add_argument('-s', '--similar', dest='similar', help='get similar files from intel sources')
 	parser.add_argument('-q', '--query', dest='query', help='vt intelligence queries (pro api key is required)')
 	parser.add_argument('-t', '--tag', dest='tag', help='get tag-based samples')

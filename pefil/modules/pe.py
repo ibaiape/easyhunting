@@ -15,7 +15,7 @@ from utils.colors import colors
 from utils import malapi
 from pefil.modules.capautil import run_capa
 
-lief.logging.set_level(lief.logging.LOGGING_LEVEL.ERROR)
+lief.logging.disable()
 
 def is_pe(file):
     if not magic.from_file(file).startswith('PE') and not magic.from_file(file).startswith('MS-DOS'):
@@ -135,7 +135,7 @@ def dhash(filename):
     import warnings
     warnings.simplefilter("ignore")
     pe = load_pe(filename)
-    if not pe.has_resources or not pe.resources_manager.has_icons:
+    if not pe.has_resources or not pe.resources_manager.has_icons or not pe.resources_manager.icons:
         return
     hash_size = 8
     pe.resources_manager.icons[0].save('ico')

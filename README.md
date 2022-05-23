@@ -23,7 +23,7 @@ Features:
 ***Intel sources available!***: *virustotal, bazaar, urlhaus, threatfox, alienvault, triage* and *tweetfeed*. You just need api key for virustotal and triage.
 
 ***To-do***
-* Get threat info from intel sources in a bulk process (file with a ioc in each row).
+* Get threat info from intel sources in a bulk process (file with a ioc in each row) with json output.
 
 ***Contributors***
 

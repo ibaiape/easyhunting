@@ -13,3 +13,4 @@ scipy
 tabulate
 urllib3
 yara-python
+pandas

@@ -6,6 +6,7 @@ pefile
 Pillow
 py-console
 python-magic
+python-magic-bin
 requests
 scipy
 tabulate
